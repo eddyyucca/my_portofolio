@@ -93,7 +93,7 @@ export default function HeroSection() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
               Hai, Saya{" "}
-              <span className="animated-gradient-text">Eddy Adha</span>
+              <span className="animated-gradient-text">Eddy Adha Saputra</span>
             </motion.h1>
             
             <motion.p
@@ -165,7 +165,7 @@ export default function HeroSection() {
               {/* Use a placeholder image - you'll need to replace this with your actual image */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500/20 to-secondary-500/20 rounded-full blur-xl animate-pulse"></div>
               <Image
-                src="/images/profile.jpg" // Replace with your profile picture
+                src="/images/Profil.jpeg" // Replace with your profile picture
                 alt="Eddy Adha Saputra"
                 width={400}
                 height={400}

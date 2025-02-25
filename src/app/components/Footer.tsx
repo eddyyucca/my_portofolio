@@ -38,7 +38,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0">
             <Link href="/">
               <div className="text-xl font-mono font-bold text-primary-600 dark:text-primary-400">
-                Eddy<span className="text-secondary-600 dark:text-secondary-400">.dev</span>
+                Eddy-as<span className="text-secondary-600 dark:text-secondary-400">.my.id</span>
               </div>
             </Link>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">

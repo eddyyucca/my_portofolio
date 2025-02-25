@@ -51,7 +51,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             className="text-2xl font-mono font-bold text-primary-600 dark:text-primary-400"
           >
-            Eddy<span className="text-secondary-600 dark:text-secondary-400">.dev</span>
+            Eddy-as<span className="text-secondary-600 dark:text-secondary-400">.my.id</span>
           </motion.div>
         </Link>
 
