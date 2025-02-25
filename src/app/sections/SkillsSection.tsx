@@ -135,7 +135,7 @@ export default function SkillsSection() {
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold"
             >
-              Keahlian
+              Skills
             </motion.h2>
             <motion.div
               variants={itemVariants}
@@ -145,7 +145,7 @@ export default function SkillsSection() {
               variants={itemVariants}
               className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             >
-              Berbagai kemampuan teknis yang telah saya kembangkan selama perjalanan karir saya.
+              Various technical capabilities I've developed throughout my career journey.
             </motion.p>
           </div>
 
@@ -228,7 +228,7 @@ export default function SkillsSection() {
           {/* Additional Skills */}
           <motion.div variants={itemVariants}>
             <h3 className="text-xl font-bold mb-6 text-center">
-              Keahlian Lainnya
+              Additional Skills
             </h3>
 
             <div className="flex flex-wrap justify-center gap-3">
@@ -262,7 +262,7 @@ export default function SkillsSection() {
               variants={itemVariants}
               className="text-xl font-bold mb-6 text-center"
             >
-              Sertifikasi
+              Certifications
             </motion.h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

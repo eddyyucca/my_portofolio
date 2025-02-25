@@ -31,20 +31,30 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
+  const [mounted, setMounted] = useState(false);
+
+  // Once mounted, we can safely show the UI
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.removeAttribute(attribute);
+    
+    // Remove the old attribute
+    const classList = root.classList;
+    if (classList.contains("light")) classList.remove("light");
+    if (classList.contains("dark")) classList.remove("dark");
 
+    // Add the current theme attribute
     if (theme === "system" && enableSystem) {
       const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
         ? "dark"
         : "light";
-      root.setAttribute(attribute, systemTheme);
-      return;
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(theme);
     }
-
-    root.setAttribute(attribute, theme);
   }, [theme, attribute, enableSystem]);
 
   // Listen for system theme changes
@@ -55,9 +65,15 @@ export function ThemeProvider({
     
     const handleChange = () => {
       if (theme === "system") {
-        const systemTheme = mediaQuery.matches ? "dark" : "light";
         const root = window.document.documentElement;
-        root.setAttribute(attribute, systemTheme);
+        const systemTheme = mediaQuery.matches ? "dark" : "light";
+        
+        // Remove both themes first
+        if (root.classList.contains("light")) root.classList.remove("light");
+        if (root.classList.contains("dark")) root.classList.remove("dark");
+        
+        // Add the correct theme
+        root.classList.add(systemTheme);
       }
     };
 
@@ -65,14 +81,36 @@ export function ThemeProvider({
     return () => mediaQuery.removeEventListener("change", handleChange);
   }, [attribute, enableSystem, theme]);
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => setTheme(theme),
+  // Handle the theme toggle directly in this hook
+  const handleSetTheme = (newTheme: Theme) => {
+    setTheme(newTheme);
+    
+    // Also, manually update class here for immediate feedback
+    const root = window.document.documentElement;
+    if (root.classList.contains("light")) root.classList.remove("light");
+    if (root.classList.contains("dark")) root.classList.remove("dark");
+    
+    if (newTheme === "system") {
+      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light";
+      root.classList.add(systemTheme);
+    } else {
+      root.classList.add(newTheme);
+    }
   };
 
+  const value = {
+    theme,
+    setTheme: handleSetTheme,
+  };
+
+  // Prevent theme flash by waiting until mounted
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
-      {children}
+      {mounted ? children : 
+        <div style={{ visibility: "hidden" }}>{children}</div>
+      }
     </ThemeProviderContext.Provider>
   );
 }

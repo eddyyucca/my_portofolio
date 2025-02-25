@@ -32,41 +32,41 @@ export default function AboutSection() {
   // Career timeline data
   const timeline = [
     {
-      year: "2023 - Sekarang",
+      year: "2023 - Present",
       company: "PT. Bukit Makmur Mandiri Utama",
-      position: "Foreman - IT Operation",
-      description: "Mengelola tim dengan metodologi agile, menganalisis data untuk mendukung keputusan strategis, dan mengembangkan aplikasi mobile dan desktop.",
+      position: "Information Technology",
+      description: "Managing teams using agile methodology, analyzing data to support strategic decisions, and developing mobile and desktop applications.",
       icon: <Monitor size={20} />,
     },
     {
       year: "2022 - 2023",
       company: "PT. Cakrawala Putra Bersama",
-      position: "Admin Logistik",
-      description: "Mengelola administrasi logistik, ahli dalam SAP, dan mengembangkan aplikasi Logistic & Plant untuk manajemen inventaris.",
+      position: "Logistics Administration",
+      description: "Managing logistics administration, proficiency in SAP, and developing Logistic & Plant application for inventory and plant management.",
       icon: <Briefcase size={20} />,
     },
     {
       year: "2021 - 2022",
       company: "RSUD Datu Sanggul Rantau",
-      position: "IT Programmer",
-      description: "Merancang, mengembangkan, dan memelihara software, dan membangun Aplikasi Antrian Online Terintegrasi dengan SIMRS Khanza.",
+      position: "IT Hospital Management Information System",
+      description: "Designing, developing, and maintaining software, and building an Integrated Online Queue Application with SIMRS Khanza.",
       icon: <Smartphone size={20} />,
     },
     {
       year: "2019 - 2020",
       company: "PT. Via Digital Indonesia",
-      position: "Backend Developer",
-      description: "Merancang dan mengimplementasikan backend untuk aplikasi dan website, serta mengembangkan Aplikasi Internal untuk Bank Indonesia Cabang Kalimantan Selatan.",
+      position: "Information Technology",
+      description: "Designing and implementing backend for applications and websites, and developing the Internal Application for Bank Indonesia Branch in South Kalimantan.",
       icon: <Code size={20} />,
     },
   ];
 
   // Skills data
   const skills = [
-    { name: "Frontend Development", icon: <Monitor size={20} />, level: 90 },
-    { name: "Mobile (Flutter)", icon: <Smartphone size={20} />, level: 85 },
-    { name: "UI/UX Design", icon: <BookOpen size={20} />, level: 80 },
-    { name: "Backend (PHP, Node.js)", icon: <Code size={20} />, level: 75 },
+    { name: "Application Development", icon: <Monitor size={20} />, level: 90 },
+    { name: "Data Analysis", icon: <BookOpen size={20} />, level: 85 },
+    { name: "Agile & Scrum", icon: <Briefcase size={20} />, level: 90 },
+    { name: "Mobile Development", icon: <Smartphone size={20} />, level: 85 },
   ];
 
   return (
@@ -85,7 +85,7 @@ export default function AboutSection() {
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold"
             >
-              Tentang Saya
+              About Me
             </motion.h2>
             <motion.div
               variants={itemVariants}
@@ -95,8 +95,8 @@ export default function AboutSection() {
               variants={itemVariants}
               className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             >
-              Pengembang Frontend dengan pengalaman dalam membangun aplikasi yang inovatif
-              dan berkinerja tinggi.
+              A versatile Software Engineer with experience in building innovative solutions for 
+              operational efficiency and leading agile teams.
             </motion.p>
           </div>
 
@@ -142,28 +142,28 @@ export default function AboutSection() {
 
             {/* Bio content */}
             <motion.div variants={itemVariants} className="space-y-6 order-2 md:order-2">
-              <h3 className="text-2xl font-bold">Pengembang Aplikasi Serbaguna</h3>
+              <h3 className="text-2xl font-bold">Versatile Application Developer</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Saya adalah seorang Pengembang Aplikasi dengan keahlian di platform Web, Mobile, dan Desktop.
-                Berpengalaman dalam membangun solusi inovatif untuk efisiensi operasional, mengelola tim agile,
-                dan mengembangkan aplikasi end-to-end.
+                I am a versatile Application Developer with expertise in Web, Mobile, and Desktop platforms.
+                Experienced in building innovative solutions for operational efficiency, managing agile teams,
+                and delivering end-to-end application development.
               </p>
               <p className="text-gray-600 dark:text-gray-300">
-                Saya memiliki kemampuan terbukti dalam memimpin proyek, menganalisis data untuk keputusan
-                strategis, dan mengimplementasikan sistem IT untuk mengoptimalkan operasi perusahaan.
-                Dikenal karena berhasil mengembangkan aplikasi-aplikasi penting di berbagai industri dan
-                mendorong hasil yang berdampak positif.
+                I have proven ability to lead projects, analyze data for strategic decisions, and implement IT systems
+                to optimize company operations. Known for successfully developing key applications across diverse
+                industries and driving impactful results in roles ranging from software development to data
+                analysis and Scrum mastery.
               </p>
 
               {/* Key facts */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 <div className="flex flex-col">
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">Lokasi</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">Location</span>
                   <span className="font-medium">Banjarmasin, Indonesia</span>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">Pengalaman</span>
-                  <span className="font-medium">5+ Tahun</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">Experience</span>
+                  <span className="font-medium">5+ Years</span>
                 </div>
                 <div className="flex flex-col">
                   <span className="text-gray-500 dark:text-gray-400 text-sm">Email</span>
@@ -175,8 +175,8 @@ export default function AboutSection() {
                   </a>
                 </div>
                 <div className="flex flex-col">
-                  <span className="text-gray-500 dark:text-gray-400 text-sm">Pendidikan</span>
-                  <span className="font-medium">S1 Teknik Informatika</span>
+                  <span className="text-gray-500 dark:text-gray-400 text-sm">Education</span>
+                  <span className="font-medium">BSc in Informatics Engineering</span>
                 </div>
               </div>
             </motion.div>
@@ -184,11 +184,11 @@ export default function AboutSection() {
 
           {/* Skills */}
           <motion.div variants={containerVariants}>
-            <motion.h3
+                          <motion.h3
               variants={itemVariants}
               className="text-2xl font-bold text-center mb-8"
             >
-              Keahlian
+              Key Skills
             </motion.h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -221,11 +221,11 @@ export default function AboutSection() {
 
           {/* Career Timeline */}
           <motion.div variants={containerVariants}>
-            <motion.h3
+                          <motion.h3
               variants={itemVariants}
               className="text-2xl font-bold text-center mb-8"
             >
-              Perjalanan Karir
+              Career Journey
             </motion.h3>
 
             <div className="relative border-l-2 border-primary-200 dark:border-primary-900 ml-3 md:ml-6 pl-8 space-y-10">

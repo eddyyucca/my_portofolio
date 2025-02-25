@@ -56,7 +56,7 @@ export default function ContactSection() {
     if (!formState.name || !formState.email || !formState.message) {
       setIsSubmitting(false);
       setSubmitStatus("error");
-      setErrorMessage("Harap isi semua field yang diperlukan");
+      setErrorMessage("Please fill in all required fields");
       return;
     }
 
@@ -65,7 +65,7 @@ export default function ContactSection() {
     if (!emailRegex.test(formState.email)) {
       setIsSubmitting(false);
       setSubmitStatus("error");
-      setErrorMessage("Email tidak valid");
+      setErrorMessage("Email is invalid");
       return;
     }
 
@@ -85,7 +85,7 @@ export default function ContactSection() {
     } catch (error) {
       console.error("Error submitting form:", error);
       setSubmitStatus("error");
-      setErrorMessage("Terjadi kesalahan saat mengirim pesan. Silakan coba lagi.");
+      setErrorMessage("An error occurred while sending the message. Please try again.");
     } finally {
       setIsSubmitting(false);
     }
@@ -107,7 +107,7 @@ export default function ContactSection() {
               variants={itemVariants}
               className="text-3xl md:text-4xl font-bold"
             >
-              Hubungi Saya
+              Contact Me
             </motion.h2>
             <motion.div
               variants={itemVariants}
@@ -117,7 +117,7 @@ export default function ContactSection() {
               variants={itemVariants}
               className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
             >
-              Tertarik untuk berkolaborasi? Jangan ragu untuk menghubungi saya!
+              Interested in collaborating? Don't hesitate to reach out!
             </motion.p>
           </div>
 
@@ -131,7 +131,7 @@ export default function ContactSection() {
                 variants={itemVariants}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-xl font-bold mb-6">Informasi Kontak</h3>
+                <h3 className="text-xl font-bold mb-6">Contact Information</h3>
                 
                 <div className="space-y-4">
                   <div className="flex items-start">
@@ -154,12 +154,12 @@ export default function ContactSection() {
                       <Phone size={20} />
                     </div>
                     <div>
-                      <h4 className="font-medium">Telepon</h4>
+                      <h4 className="font-medium">Phone</h4>
                       <a 
                         href="tel:+6281399995003"
                         className="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                       >
-                        +62 813-9999-5003
+                        +62 812-5065-3005
                       </a>
                     </div>
                   </div>
@@ -169,7 +169,7 @@ export default function ContactSection() {
                       <MapPin size={20} />
                     </div>
                     <div>
-                      <h4 className="font-medium">Lokasi</h4>
+                      <h4 className="font-medium">Location</h4>
                       <p className="text-gray-600 dark:text-gray-300">
                         Banjarmasin, Indonesia
                       </p>
@@ -182,23 +182,23 @@ export default function ContactSection() {
                 variants={itemVariants}
                 className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
               >
-                <h3 className="text-xl font-bold mb-4">Jam Kerja</h3>
+                <h3 className="text-xl font-bold mb-4">Working Hours</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Saya tersedia untuk pertanyaan dan diskusi pada jam berikut:
+                  I'm available for questions and discussions during the following hours:
                 </p>
                 
                 <div className="space-y-2">
                   <div className="flex justify-between">
-                    <span className="font-medium">Senin - Jumat:</span>
+                    <span className="font-medium">Monday - Friday:</span>
                     <span className="text-gray-600 dark:text-gray-300">09:00 - 17:00 WIB</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="font-medium">Sabtu:</span>
+                    <span className="font-medium">Saturday:</span>
                     <span className="text-gray-600 dark:text-gray-300">10:00 - 15:00 WIB</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="font-medium">Minggu:</span>
-                    <span className="text-gray-600 dark:text-gray-300">Tutup</span>
+                    <span className="font-medium">Sunday:</span>
+                    <span className="text-gray-600 dark:text-gray-300">Closed</span>
                   </div>
                 </div>
               </motion.div>
@@ -209,7 +209,7 @@ export default function ContactSection() {
               variants={itemVariants}
               className="col-span-1 lg:col-span-3 bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow"
             >
-              <h3 className="text-xl font-bold mb-6">Kirim Pesan</h3>
+              <h3 className="text-xl font-bold mb-6">Send Message</h3>
               
               {submitStatus === "success" ? (
                 <motion.div
@@ -218,7 +218,7 @@ export default function ContactSection() {
                   className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 p-4 rounded-lg flex items-center"
                 >
                   <CheckCircle className="mr-2" size={20} />
-                  <span>Pesan Anda berhasil dikirim! Saya akan segera menghubungi Anda.</span>
+                  <span>Your message has been sent successfully! I'll contact you soon.</span>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -232,7 +232,7 @@ export default function ContactSection() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium mb-1">
-                        Nama
+                        Name
                       </label>
                       <input
                         type="text"
@@ -241,7 +241,7 @@ export default function ContactSection() {
                         value={formState.name}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                        placeholder="Nama Anda"
+                        placeholder="Your Name"
                       />
                     </div>
                     
@@ -256,14 +256,14 @@ export default function ContactSection() {
                         value={formState.email}
                         onChange={handleChange}
                         className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                        placeholder="email@anda.com"
+                        placeholder="email@example.com"
                       />
                     </div>
                   </div>
                   
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium mb-1">
-                      Subjek
+                      Subject
                     </label>
                     <input
                       type="text"
@@ -272,7 +272,7 @@ export default function ContactSection() {
                       value={formState.subject}
                       onChange={handleChange}
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                      placeholder="Subjek pesan Anda"
+                      placeholder="Subject of your message"
                     />
                   </div>
                   
@@ -287,7 +287,7 @@ export default function ContactSection() {
                       onChange={handleChange}
                       rows={5}
                       className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none"
-                      placeholder="Tuliskan pesan Anda di sini..."
+                      placeholder="Write your message here..."
                     ></textarea>
                   </div>
                   
@@ -298,15 +298,15 @@ export default function ContactSection() {
                     whileTap={{ scale: 0.97 }}
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? (
+                                          {isSubmitting ? (
                       <>
                         <div className="animate-spin h-4 w-4 border-2 border-white border-t-transparent rounded-full"></div>
-                        <span>Mengirim...</span>
+                        <span>Sending...</span>
                       </>
                     ) : (
                       <>
                         <Send size={18} />
-                        <span>Kirim Pesan</span>
+                        <span>Send Message</span>
                       </>
                     )}
                   </motion.button>

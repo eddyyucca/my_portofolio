@@ -7,11 +7,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon, Menu, X } from "lucide-react";
 
 const navLinks = [
-  { href: "/", label: "Beranda" },
-  { href: "#about", label: "Tentang" },
-  { href: "#projects", label: "Proyek" },
-  { href: "#skills", label: "Keahlian" },
-  { href: "#contact", label: "Kontak" },
+  { href: "/", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Navbar() {
@@ -32,7 +31,12 @@ export default function Navbar() {
   }, []);
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+    
+    // Force immediate UI update
+    document.documentElement.classList.remove("dark", "light");
+    document.documentElement.classList.add(newTheme);
   };
 
   return (

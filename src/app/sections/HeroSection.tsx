@@ -85,14 +85,14 @@ export default function HeroSection() {
               variants={itemVariants}
               className="inline-block mb-4 px-4 py-1.5 bg-primary-100 dark:bg-primary-900/30 text-primary-800 dark:text-primary-300 rounded-full text-sm font-medium"
             >
-              Frontend Developer
+              Software Engineer | IT Operations Specialist | Data Analyst | Scrum Master
             </motion.p>
             
             <motion.h1
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
             >
-              Hai, Saya{" "}
+              Hi, I'm{" "}
               <span className="animated-gradient-text">Eddy Adha Saputra</span>
             </motion.h1>
             
@@ -100,7 +100,7 @@ export default function HeroSection() {
               variants={itemVariants}
               className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg mx-auto md:mx-0"
             >
-              Seorang Frontend Developer dengan pengalaman dalam React, Next.js, Flutter, dan berbagai kerangka kerja modern lainnya.
+              A versatile Software Engineer with expertise in Web Development, Data Analysis, Supply Chain Management, and Agile Project Management.
             </motion.p>
             
             <motion.div
@@ -108,12 +108,12 @@ export default function HeroSection() {
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
               <motion.a
-                href="#projects"
+                href="#skills"
                 className="px-6 py-3 bg-primary-600 hover:bg-primary-700 dark:bg-primary-700 dark:hover:bg-primary-600 text-white rounded-lg font-medium flex items-center justify-center gap-2 transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Lihat Portofolio
+                View Skills
                 <ArrowRight size={18} />
               </motion.a>
               
@@ -123,7 +123,7 @@ export default function HeroSection() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Hubungi Saya
+                Contact Me
               </motion.a>
             </motion.div>
 

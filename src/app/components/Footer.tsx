@@ -25,7 +25,7 @@ export default function Footer() {
     },
     {
       name: "Instagram",
-      href: "https://instagram.com/eddyyucca",
+      href: "https://instagram.com/eddy_adha_s",
       icon: <Instagram size={20} />,
     },
   ];
@@ -69,7 +69,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-800 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div>
             <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              Navigasi
+              Navigation
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -77,7 +77,7 @@ export default function Footer() {
                   href="/"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  Beranda
+                  Home
                 </Link>
               </li>
               <li>
@@ -85,15 +85,7 @@ export default function Footer() {
                   href="#about"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  Tentang
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#projects"
-                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
-                >
-                  Proyek
+                  About
                 </Link>
               </li>
               <li>
@@ -101,7 +93,15 @@ export default function Footer() {
                   href="#skills"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  Keahlian
+                  Skills
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#contact"
+                  className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -109,7 +109,7 @@ export default function Footer() {
 
           <div>
             <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              Kontak
+              Contact
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
@@ -136,13 +136,13 @@ export default function Footer() {
 
           <div>
             <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-4">
-              Keahlian
+              Skills
             </h3>
             <ul className="space-y-2 text-sm">
-              <li className="text-gray-600 dark:text-gray-400">Frontend Development</li>
-              <li className="text-gray-600 dark:text-gray-400">React & Next.js</li>
-              <li className="text-gray-600 dark:text-gray-400">Flutter</li>
-              <li className="text-gray-600 dark:text-gray-400">UI/UX Design</li>
+              <li className="text-gray-600 dark:text-gray-400">Software Engineering</li>
+              <li className="text-gray-600 dark:text-gray-400">Data Analysis</li>
+              <li className="text-gray-600 dark:text-gray-400">Scrum Master</li>
+              <li className="text-gray-600 dark:text-gray-400">Mobile Development</li>
             </ul>
           </div>
 
@@ -156,7 +156,7 @@ export default function Footer() {
                   href="/privacy"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  Kebijakan Privasi
+                  Privacy Policy
                 </Link>
               </li>
               <li>
@@ -164,7 +164,7 @@ export default function Footer() {
                   href="/terms"
                   className="text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400"
                 >
-                  Syarat dan Ketentuan
+                  Terms & Conditions
                 </Link>
               </li>
             </ul>
